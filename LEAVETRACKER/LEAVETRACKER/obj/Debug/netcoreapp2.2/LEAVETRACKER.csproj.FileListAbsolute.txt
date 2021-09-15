@@ -1,0 +1,11 @@
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\bin\Debug\netcoreapp2.2\LEAVETRACKER.deps.json
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\bin\Debug\netcoreapp2.2\LEAVETRACKER.runtimeconfig.json
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\bin\Debug\netcoreapp2.2\LEAVETRACKER.runtimeconfig.dev.json
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\bin\Debug\netcoreapp2.2\LEAVETRACKER.dll
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\bin\Debug\netcoreapp2.2\LEAVETRACKER.pdb
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\obj\Debug\netcoreapp2.2\LEAVETRACKER.csprojAssemblyReference.cache
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\obj\Debug\netcoreapp2.2\LEAVETRACKER.csproj.CoreCompileInputs.cache
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\obj\Debug\netcoreapp2.2\LEAVETRACKER.AssemblyInfoInputs.cache
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\obj\Debug\netcoreapp2.2\LEAVETRACKER.AssemblyInfo.cs
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\obj\Debug\netcoreapp2.2\LEAVETRACKER.dll
+C:\Users\abhijeets\source\repos\LEAVETRACKER\LEAVETRACKER\obj\Debug\netcoreapp2.2\LEAVETRACKER.pdb
