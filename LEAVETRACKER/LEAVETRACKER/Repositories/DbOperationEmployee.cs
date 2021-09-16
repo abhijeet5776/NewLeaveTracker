@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LEAVETRACKER.Repositories
 {
-    class DbOperationEmployee:IEmployeeDb
+    class DbOperationEmployee : IEmployeeDb
     {
         public List<EMPLOYEE> GetEmployeeList()
         {
@@ -23,8 +23,6 @@ namespace LEAVETRACKER.Repositories
                 {
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
-
-
                     while (reader.Read())
                     {
                         EMPLOYEE add = new EMPLOYEE();
@@ -32,12 +30,8 @@ namespace LEAVETRACKER.Repositories
                         add.Name = reader.GetValue(1).ToString();
                         var Id = reader.GetValue(2).ToString();
                         add.ManagerId = !string.IsNullOrWhiteSpace(Id) ? Convert.ToInt32(Id) : 0;
-
                         List.Add(add);
-
                     }
-
-
                 }
                 catch (Exception ex)
                 {

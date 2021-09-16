@@ -6,28 +6,23 @@ using System.Data.SqlClient;
 
 namespace LEAVETRACKER.Repositories
 {
-    class DbOperationsLeaves:ILeaveDb
+    class DbOperationsLeaves : ILeaveDb
     {
-
-    public  void SaveLeaves(int EmployeeId,string  Name,int ManagerId, string Title,string Description,DateTime Startdate,DateTime Enddate,string Status)
+        public void SaveLeaves(int EmployeeId, string Name, int ManagerId, string Title, string Description, DateTime Startdate, DateTime Enddate, string Status)
         {
-           
             string Connectstring = "Data Source=Localhost;Initial Catalog=LEAVETRACKER;Integrated Security=True";
-
             string Query = "insert into LEAVES(Employee_id,Name,Manager_id,Title,Description,Startdate,Enddate,Status)" + "values (@Employee_id, @Name, @Manager_id, @Title, @Description,@Startdate,@Enddate, @Status) ";
             using (SqlConnection connection = new SqlConnection(Connectstring))
             using (SqlCommand command = new SqlCommand(Query, connection))
             {
-
-
                 command.Parameters.Add("@Employee_id", SqlDbType.Int).Value = EmployeeId;
                 command.Parameters.Add("@Name", SqlDbType.VarChar, 50).Value = Name;
                 command.Parameters.Add("@Manager_id", SqlDbType.Int).Value = ManagerId;
                 command.Parameters.Add("@Title", SqlDbType.VarChar, 50).Value = Title;
                 command.Parameters.Add("@Description", SqlDbType.VarChar, 50).Value = Description;
-                command.Parameters.Add("@Startdate", SqlDbType.DateTime).Value =Startdate;
-                command.Parameters.Add("@Enddate", SqlDbType.DateTime).Value =Enddate;
-                command.Parameters.Add("@Status", SqlDbType.VarChar, 50).Value =Status;
+                command.Parameters.Add("@Startdate", SqlDbType.DateTime).Value = Startdate;
+                command.Parameters.Add("@Enddate", SqlDbType.DateTime).Value = Enddate;
+                command.Parameters.Add("@Status", SqlDbType.VarChar, 50).Value = Status;
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -41,7 +36,6 @@ namespace LEAVETRACKER.Repositories
             using (SqlConnection connection = new SqlConnection(Connectstring))
             {
                 SqlCommand Command = new SqlCommand(queryString, connection);
-
                 Command.Parameters.AddWithValue("@EmployeeId", EmployeeId);
                 try
                 {
@@ -68,7 +62,7 @@ namespace LEAVETRACKER.Repositories
                 }
             }
         }
-        public void AssignedLeaves(int EmployeeId,int Id,string Status)
+        public void AssignedLeaves(int EmployeeId, int Id, string Status)
         {
             Console.WriteLine("\t\t\t\t\t***********ASSIGNEDLEAVES********");
             string Connectstring = "Data Source=Localhost;Initial Catalog=LEAVETRACKER;Integrated Security=True";
@@ -77,13 +71,10 @@ namespace LEAVETRACKER.Repositories
             using (SqlConnection connection = new SqlConnection(Connectstring))
             {
                 SqlCommand command = new SqlCommand(LqueryString, connection);
-
                 command.Parameters.AddWithValue("@ManagerId", EmployeeId);
 
                 try
                 {
-
-
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -95,7 +86,6 @@ namespace LEAVETRACKER.Repositories
                         add.EmployeeId = Convert.ToInt32(reader.GetValue(1));
                         add.Name = reader.GetValue(2).ToString();
                         add.ManagerId = Convert.ToInt32(reader.GetValue(3));
-
                         Llist.Add(add);
                     }
                     reader.Close();
@@ -112,7 +102,6 @@ namespace LEAVETRACKER.Repositories
                 Console.WriteLine("Enter the Choice of Change Status =1)Yes  2)no");
                 try
                 {
-
                     int lChoice = Convert.ToInt32(Console.ReadLine());
                     switch (lChoice)
                     {
@@ -125,7 +114,6 @@ namespace LEAVETRACKER.Repositories
                                 var matchingId = Llist.FindAll(x => x.Id == Id);
                                 if (matchingId.Count != 0)
                                 {
-                                    
                                     Console.WriteLine("Enter the Choice =1)Accept \t 2)Reject ");
                                     int NewChoice = Convert.ToInt32(Console.ReadLine());
                                     switch (NewChoice)
@@ -135,31 +123,23 @@ namespace LEAVETRACKER.Repositories
                                             Status = "Accept";
                                             string New1queryString = " update  LEAVES set Status = '" + Status + "' where Id=" + Id + "; ";
                                             SqlCommand NewCommand1 = new SqlCommand(New1queryString, NewConnection);
-
                                             NewConnection.Open();
-
-
                                             NewCommand1.ExecuteNonQuery();
-
                                             NewConnection.Close();
-                                            goto lch ;
+                                            goto lch;
                                         case 2:
 
                                             Status = "Reject";
                                             string New2queryString = " update  LEAVES set Status = '" + Status + "' where Id =" + Id + ";";
                                             SqlCommand NewCommand2 = new SqlCommand(New2queryString, NewConnection);
-
                                             NewConnection.Open();
                                             NewCommand2.ExecuteNonQuery();
                                             NewConnection.Close();
-                                           goto lch;
+                                            goto lch;
                                         default:
 
                                             break;
                                     }
-
-
-
                                 }
                                 else
                                 {
@@ -173,8 +153,6 @@ namespace LEAVETRACKER.Repositories
                         default:
                             Console.WriteLine("Invalid Choice");
                             goto ch;
-
-
                     }
                 }
                 catch { Console.WriteLine("Inavalid Choice"); goto lch; }

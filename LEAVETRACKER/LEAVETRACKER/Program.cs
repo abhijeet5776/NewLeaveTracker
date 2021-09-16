@@ -9,7 +9,7 @@ using System.Text;
 
 namespace LEAVETRACKER
 {
-    interface IEmployee {  void LeavesOption(); }
+    interface IEmployee { void LeavesOption(); }
     interface ILeave { void CreateLeave(); }
     interface ILeaveDb
     {
@@ -19,16 +19,16 @@ namespace LEAVETRACKER
     }
     interface IEmployeeDb { List<EMPLOYEE> GetEmployeeList(); }
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
-          IEmployee employee = new EMPLOYEE();
+            IEmployee employee = new EMPLOYEE();
             employee.LeavesOption();
         }
     }
 
 }
 
- 
 
-    
+
+
