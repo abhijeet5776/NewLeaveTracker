@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UPDATEDLEAVEAPI1", "UPDATEDLEAVEAPI1\UPDATEDLEAVEAPI1.csproj", "{4545B034-49F8-4197-9BC3-9BAB05CFB0D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Test", "Unit Test\Unit Test.csproj", "{291C8356-7360-441E-8EC6-B2B21CDE4ACD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4545B034-49F8-4197-9BC3-9BAB05CFB0D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4545B034-49F8-4197-9BC3-9BAB05CFB0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4545B034-49F8-4197-9BC3-9BAB05CFB0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4545B034-49F8-4197-9BC3-9BAB05CFB0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291C8356-7360-441E-8EC6-B2B21CDE4ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291C8356-7360-441E-8EC6-B2B21CDE4ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291C8356-7360-441E-8EC6-B2B21CDE4ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291C8356-7360-441E-8EC6-B2B21CDE4ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73EECEEF-F40D-4777-8E30-AF3E73FB251F}
+	EndGlobalSection
+EndGlobal
